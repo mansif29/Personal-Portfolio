@@ -1,0 +1,401 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #fffaf2;
+    --surface: #ffffff;
+    --text: #30332f;
+    --accent: #e56b4b;
+    --secondary: #f7e6d5;
+    --shadow: rgba(0, 0, 0, 0.08);
+}
+
+body.dark {
+    --background: #202521;
+    --surface: #2c332e;
+    --text: #f5f5f0;
+    --accent: #ff997b;
+    --secondary: #363f38;
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+/* Navigation Bar */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--surface);
+    box-shadow: 0 2px 12px var(--shadow);
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--accent);
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+#themeButton,
+.menu-button {
+    background: var(--secondary);
+    border: none;
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.menu-button {
+    display: none;
+}
+
+/* Home Section */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background:
+        radial-gradient(circle at top right,
+        var(--secondary), transparent 45%);
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: appear 1s ease;
+}
+
+.welcome {
+    color: var(--accent);
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 55px);
+    margin-bottom: 12px;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero h3 {
+    margin-bottom: 18px;
+    font-size: 23px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* General Sections */
+.section {
+    padding: 75px 25px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.alternate {
+    max-width: 100%;
+    background: var(--secondary);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: var(--accent);
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: var(--surface);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.profile-icon {
+    min-width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    background: var(--secondary);
+    border-radius: 50%;
+    font-size: 50px;
+}
+
+.about-card h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/* Cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.card {
+    background: var(--surface);
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px var(--shadow);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card h3 {
+    margin: 12px 0;
+}
+
+.card-icon {
+    font-size: 40px;
+}
+
+.project-card {
+    text-align: left;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 6px 10px;
+    background: var(--secondary);
+    color: var(--accent);
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+/* Skills */
+.skills-container {
+    max-width: 750px;
+    margin: auto;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.progress {
+    width: 100%;
+    height: 12px;
+    background: var(--secondary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+/* Contact Form */
+.contact-text {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+}
+
+#formMessage {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--surface);
+    box-shadow: 0 -2px 10px var(--shadow);
+}
+
+/* Animation */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .nav-links {
+        gap: 12px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 12px;
+    }
+
+    .menu-button {
+        display: inline-block;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero h3 {
+        font-size: 19px;
+    }
+
+    .section {
+        padding: 55px 20px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .about-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}

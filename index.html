@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Personal Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">MyPortfolio.</h2>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="themeButton" aria-label="Toggle theme">
+                🌙
+            </button>
+
+            <button class="menu-button" id="menuButton"
+                    aria-label="Toggle navigation">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+            <h1>Hello, I'm <span>Mansi Falke</span></h1>
+
+            <h3>BCA Student | Future Web Developer</h3>
+
+            <p>
+                I am a computer application student who loves learning
+                new technologies and creating attractive websites.
+            </p>
+
+            <a href="#about" class="btn">Explore My Portfolio</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-card">
+            <div class="profile-icon">👩🏻‍💻</div>
+
+            <div>
+                <h3>Who Am I?</h3>
+
+                <p>
+                    I am a BCA student at SB Jain Institute of Technology,
+                    Management and Research. I am interested in web
+                    development, programming, and technology. My goal is
+                    to improve my technical skills and build useful
+                    real-world applications.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section alternate">
+        <h2 class="section-title">My Education</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <div class="card-icon">🎓</div>
+                <h3>Bachelor of Computer Applications</h3>
+                <p>SB Jain Institute of Technology, Management and Research</p>
+                <p><strong>2025 – Present</strong></p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3>Class XII</h3>
+                <p>Higher Secondary Education</p>
+                <p><strong>2025</strong></p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🏫</div>
+                <h3>Class X</h3>
+                <p>Secondary Education</p>
+                <p><strong>2023</strong></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <span>HTML5</span>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 85%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span>CSS3</span>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 55%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span>Jupyter Notebook</span>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 65%"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section alternate">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="card-container">
+
+            <div class="card project-card">
+                <div class="card-icon">💪</div>
+                <h3>JS Fitness Club Portal</h3>
+                <p>
+                    A gym website that presents membership plans,
+                    trainer information, and fitness facilities.
+                </p>
+                <span class="tag">HTML • CSS • JavaScript</span>
+            </div>
+
+            <div class="card project-card">
+                <div class="card-icon">💻</div>
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A responsive website showcasing my education,
+                    technical skills, and projects.
+                </p>
+                <span class="tag">HTML • CSS • JavaScript</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Me</h2>
+
+        <p class="contact-text">
+            Have a question or want to connect? Send me a message!
+        </p>
+
+        <form id="contactForm" class="contact-form">
+
+            <input type="text" id="name"
+                   placeholder="Your Name" required>
+
+            <input type="email" id="email"
+                   placeholder="Your Email" required>
+
+            <textarea id="message" rows="5"
+                      placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+
+            <p id="formMessage" role="status"></p>
+
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© <span id="year"></span> Mansi Falke | Personal Portfolio</p>
+        <p>Designed with HTML, CSS and JavaScript ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
